@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблица студентов</title>
+  <link rel="stylesheet" href="./assets/reset.css">
+  <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <h1>Таблица студентов 2022</h1>
+    </div>
+  </header>
+  <div class="wrapper">
+    <ul class="filter-list">
+      <li class="filter-list__item"><span class="filter-list__describe">Фильтр по ФИО:</span><input id="fullname" type="text"></li>
+      <li class="filter-list__item"><span class="filter-list__describe">Фильтр по факультету:</span><input id="faculty" type="text"></li>
+      <li class="filter-list__item"><span class="filter-list__describe">Фильтр по году нач. обучения:</span><input id="inputStartsEduc" type="text"></li>
+      <li class="filter-list__item"><span class="filter-list__describe">Фильтр по году оконч. обучения:</span><input id="inputEndsEduc" type="text"></li>
+    </ul>
+
+
+    <div class="wrapper">
+      <button class="add-student-button">Добавить нового студента</button>
+    </div>
+
+
+
+
+    <table class="table-of-students">
+      <caption>Таблица Студентов 2022</caption>
+      <thead>
+        <tr class="main-line">
+          <td id="sortName" class="main-line__cell">ФИО</td>
+          <td id="sortFaculty" class="main-line__cell">Факультет</td>
+          <td id="sortAge" class="main-line__cell">Д.р и Возраст</td>
+          <td id="sortEducYears" class="main-line__cell">Годы обучения</td>
+        </tr>
+
+
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+    <div class="add-student hide">
+      <button class="add-student__close-btn"></button>
+      <form id="add-student-form" class="add-student__form" action="get">
+        <span class="hide error">Все поля должны быть заполнены</span>
+        <ul>
+          <li class="add-student__item"><label for="name">имя:</label>
+            <input class="add-student__input" id="name" type="text" pattern="^[А-ЯЁ][а-яё]*$" title="Только буквы, кириллица" placeholder="Введите имя">
+          </li>
+        </ul>
+        <ul>
+          <li class="add-student__item"><label for="subname">Фамилия:</label>
+            <input class="add-student__input" id="subname" type="text" pattern="^[А-ЯЁ][а-яё]*$" title="Только буквы, кириллица" placeholder="Введите фамилию">
+          </li>
+        </ul>
+        <ul>
+          <li class="add-student__item">
+            <label for="patronymic">Отчество:</label>
+            <input class="add-student__input" id="patronymic" type="text" pattern="^[А-ЯЁ][а-яё]*$" title="Только буквы, кириллица" placeholder="Введите отчество">
+          </li>
+        </ul>
+        <ul>
+          <li class="add-student__item">
+            <label for="faculty">Факультет:</label>
+            <input class="add-student__input" id="faculty" type="text" pattern="^[А-ЯЁ][а-яё]*$" title="Только буквы, кириллица" placeholder="Введите факультет">
+          </li>
+        </ul>
+        <ul>
+          <li class="add-student__item">
+            <label for="birthday">Дата рождения:</label>
+            <input class="add-student__input" id="birthday" type="date" min="1960-01-01" max="2050-01-01" placeholder=" Введите дату рождения">
+          </li>
+        </ul>
+        <ul>
+          <li class="add-student__item">
+            <label for="startsEduc">Начало обучения:</label>
+            <input class="add-student__input" id="startsEduc" type="date" min="1960-01-01" max="2050-01-01" placeholder="Введите начало обучения">
+          </li>
+        </ul>
+
+        <ul>
+          <!-- <li class="add-student__item">
+            <label for="endsEduc">Окончание обучения:</label>
+            <input class="add-student__input" id="endsEduc" type="date" min="1960-01-01" max="2050-01-01" placeholder="Введите окончание обучения">
+          </li> -->
+        </ul>
+        <button class="add-student__button">Добавить студента</button>
+      </form>
+    </div>
+  </div>
+  <script defer src="main.js"></script>
+</body>
+
+</html>

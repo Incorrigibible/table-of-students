@@ -1,0 +1,168 @@
+.hide {
+  display: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* filters */
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.filter-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  max-width: 50%;
+}
+
+/* spacing for table */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+td {
+  border: 2px solid black;
+}
+
+.add-student__button {
+  margin: 10px 0;
+}
+
+/* add new student */
+
+.add-student {
+  background-color: white;
+  border: 2px solid black;
+  padding: 60px 70px;
+  position: absolute;
+}
+
+.add-student__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.add-student__form ul {
+  width: 100%;
+}
+
+.add-student__item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.add-student__button {
+  margin: 0 auto;
+}
+
+.add-student__close-btn {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  border-top: none;
+  border-right: none;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.add-student__close-btn::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 4px;
+  background-color: black;
+  top: 11px;
+  left: 0;
+  transform: rotateZ(45deg);
+}
+
+.add-student__close-btn::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 4px;
+  background-color: black;
+  top: 11px;
+  left: 0;
+  transform: rotateZ(-45deg);
+}
+
+.add-student__button {
+  margin: 0 auto;
+}
+
+.error-input {
+  border-color: red;
+}
+
+.error {
+  color: red;
+}
+
+/* #birthday {
+  width: 100%;
+} */
+
+.add-student__input {
+  width: 100%;
+}
+
+/* sorting  */
+
+.main-line__cell {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+}
